@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Accessing variables injected by Vite's define block
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+// Accessing variables from Vite's environment
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 // Strict validation: Ensure values exist and aren't just empty strings or the literal string "undefined"
 export const isSupabaseConfigured = !!(
