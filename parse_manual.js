@@ -17,8 +17,8 @@ const supabase = createClient(
 
 // --- CONFIGURATION ---
 // Update these two lines for every new file you want to add
-const pdfPath = './GLAYDS ARROYO TRAINING BOOK2.pdf'; 
-const SOURCE_NAME = 'GLAYDS ARROYO TRAINING BOOK2';
+const pdfPath = './manual1.pdf'; 
+const SOURCE_NAME = 'manual1.pdf';
 const CATEGORY = 'Dispatcher Training';
 
 async function parseAndUpload() {

@@ -6,78 +6,13 @@
     <title>S.O.D.A. | Surface Operations Digital Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-      body { font-family: 'Inter', sans-serif; background-color: black; margin: 0; overflow-x: hidden; }
-      
-      @keyframes radar-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-
-      .radar-container {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 800px;
-        height: 800px;
-        pointer-events: none;
-        z-index: 0;
-        opacity: 0.1;
-      }
-
-      .radar-beam {
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        background: conic-gradient(from 0deg, transparent 70%, rgba(0, 57, 166, 0.4) 100%);
-        animation: radar-spin 10s linear infinite;
-      }
-
-      .app-watermark {
-        position: fixed;
-        bottom: -10%;
-        right: -10%;
-        width: 800px;
-        height: 800px;
-        opacity: 0.12;
-        filter: grayscale(1) brightness(1.5);
-        pointer-events: none;
-        z-index: -1;
-        transform: rotate(-15deg);
-      }
-
-      .glass-blur {
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-
-      ::-webkit-scrollbar { width: 6px; height: 6px; }
-      ::-webkit-scrollbar-track { background: #000; }
-      ::-webkit-scrollbar-thumb { background: #0039A6; border-radius: 10px; }
-      ::-webkit-scrollbar-thumb:hover { background: #FF6319; }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0",
-    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.90.1",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-black text-slate-900">
-    <div id="root"></div>
-    <div class="app-watermark">
-      <img src="logo.png" alt="" class="w-full h-full object-contain" />
+<body class="bg-black text-white">
+    <div class="radar-container">
+        <div class="radar-beam"></div>
     </div>
+    <div id="root"></div>
     <script type="module" src="index.tsx"></script>
 </body>
 </html>
